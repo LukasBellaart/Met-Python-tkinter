@@ -6,9 +6,13 @@ def switchColor():
     global color
     color = not color
     if color:
-        button.configure(bg="yellow")
+        print('light turning on')
+        button.configure(text="turn light off")
+        window.configure(bg="yellow")
     elif not color:
-        button.configure(bg="black")
+        print('light turning off')
+        button.configure(text="turn light on")
+        window.configure(bg="black")
 
 button = tk.Button(text='...', bg="white", fg="black", command = switchColor)
 button.pack(pady = 20, padx = 20)
